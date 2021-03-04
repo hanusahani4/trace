@@ -14,7 +14,7 @@
             color: #1a73e8;
             border-radius: 4px;
             font-family: Roboto, sans-serif;
-            font-size: 14px;
+            font-size: 18px;
             height: 36px;
             cursor: pointer;
             padding: 0 24px
@@ -182,7 +182,7 @@
             display: block;
             width: 100%;
             height: 50px;
-            font-size: 14px;
+            font-size: 18px;
             color: #848484;
             line-height: 34px;
             padding: 10px;
@@ -241,13 +241,13 @@
 
         .tracking-info-detail .tracking-box span {
             position: relative;
-            font-size: 14px;
+            font-size: 18px;
             color: rgb(0, 0, 0);
         }
 
         .tracking-info-detail .tracking-box .tracking-location {
             position: relative;
-            font-size: 14px;
+            font-size: 18px;
             color: rgb(0, 0, 0);
             padding-left: 70px;
             padding-bottom: 40px;
@@ -277,7 +277,7 @@
         .tracking-info-detail .tracking-box .tracking-location strong {
             position: relative;
             color: #222;
-            font-size: 16px;
+            font-size: 20px;
             font-weight: 400;
             display: block;
             font-family: Roboto, Arial, sans-serif;
@@ -303,6 +303,7 @@
             height: 100%;
             background-color: grey;
             width: 7px;
+
         }
 
         .tracking-info-detail .tracking-box .tracking-location.style-two::after {
@@ -364,40 +365,76 @@
             font-size: 14px !important;
         }
 
-        @media screen and (min-width:400px) {
+        @media screen and (min-width:360px) {
             #d1 {
-                width: 800px;
+                width: 1000px;
                 height: auto;
+                margin-left: 0%;
+                margin-right: 0%;
+                font-size: 180%;
+                font-weight: bolder;
+            }
+
+            .container {
+                margin-left: 0%;
+                margin-right: 0%;
+                font-size: 80%;
+                font-weight: bolder;
+                padding-right: 0%;
+            }
+
+            #dates {
+                padding-left: 15%;
+            }
+
+            .canvas {
+                left: 220px;
+            }
+
+            i {
+                position: absolute;
+                left: 85px;
+            }
+
+            .tracking-info-detail .tracking-box .tracking-location:after {
+                position: absolute;
+                content: "";
+                left: -14px;
+                top: -5px;
+                width: 35px;
+                height: 35px;
+                border-radius: 50%;
+                background-color: #006d09;
+                display: inline-block;
+                left: 73px;
             }
             #hd{
-                font-size: 123%;
-                font-weight: bolder;
+                padding-left: 100px;
             }
         }
     </style>
     <meta charset="utf-8">
 </head>
 
-<body style="background-color:#f1f3f6">
-    <div class="container" style="margin:50px">
+<body style="background-color:#f1f3f6" style="width: 200px;">
+    <div class="container" id="d2">
 
-
-        <div class="col-12 bg-o" id="d1">
+        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 bg-o " id="d1">
             <div class="card">
                 <div class="card-body" style="background-color: #000000;">
-                    <h5 style="text-align: center; color: #ffffff ">Order Tracking History</h5>
+                    <h5 style="text-align: center; color: #ffffff; ">Order Tracking History</h5>
                 </div>
             </div>
             <div class="track-section">
                 <div class="tracking-info-detail" style="padding: 50px 0px 50px 50px;">
                     <div class="tracking-box">
                         <div class="tracking-time-box">
-                            <div class="tracking-time" id="hd" >
+                            <div class="tracking-time" id="hd">
                                 <b>Booked</b>
                             </div>
                         </div>
                         <canvas class="canvas" width="5"></canvas>
-                        <div class="tracking-location style-three" >
+                        <div class="tracking-location style-three" id="dates">
                             <span></span>
                             <a class="dott"><i class="ico fa fa-check ico-green"></i>
                             </a>
@@ -412,20 +449,20 @@
                             </div>
                         </div>
                         <canvas class="canvas" width="5"></canvas>
-                        <div class="tracking-location style-three">
+                        <div class="tracking-location style-three" id="dates">
                             <a class="dott"><i class="ico fa fa-gift"></i></a>
-                            <div>Nov 28, 2018 </div>
-                            <div class="accordion dropdown" id="accordion">
+                            <strong>Nov 28, 2018</strong>
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
                                 <div class="accordion-item">
-                                    <h6 class="accordion-header" id="headingone">
-                                        <a class="accordion text-decoration-none dropdown-toggle" data-toggle="dropdown"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapseone"
-                                            aria-expanded="true" aria-controls="collapseone">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <a class="accordion-button collapsed text-decoration-none"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseOne"
+                                            aria-expanded="false" aria-controls="flush-collapseOne">
                                             Updates
                                         </a>
-                                    </h6>
-                                    <div id="collapseone" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingone" data-bs-parent="#accordion">
+                                    </h2>
+                                    <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                             <div class="container">
                                                 <table class="table table-striped">
@@ -472,21 +509,21 @@
 
                         </div>
                         <canvas class="canvas" width="5"></canvas>
-                        <div class="tracking-location style-three">
+                        <div class="tracking-location style-three" id="dates">
                             <a class="dott"><i class="ico fa fa-plane"></i></a>
                             <strong>Nov 28, 2018</strong>
-
-                            <div class="accordion dropdown" id="accordion">
+                            <!--eeeeee-->
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
                                 <div class="accordion-item">
-                                    <h6 class="accordion-header" id="headingtwo">
-                                        <a class="accordion text-decoration-none dropdown-toggle" data-toggle="dropdown"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapsetwo"
-                                            aria-expanded="true" aria-controls="collapsetwo">
+                                    <h2 class="accordion-header" id="flush-headingTwo">
+                                        <a class="accordion-button collapsed text-decoration-none"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
+                                            aria-expanded="false" aria-controls="flush-collapseTwo">
                                             Updates
                                         </a>
-                                    </h6>
-                                    <div id="collapsetwo" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingtwo" data-bs-parent="#accordion">
+                                    </h2>
+                                    <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                             <div class="container">
                                                 <table class="table table-striped">
@@ -531,20 +568,21 @@
                             </div>
                         </div>
                         <canvas class="canvas" width="5"></canvas>
-                        <div class="tracking-location style-three">
+                        <div class="tracking-location style-three" id="dates">
                             <a class="dott"><i class="ico fa fa-truck"></i></a>
                             <strong>Dec 04, 2018</strong>
-                            <div class="accordion dropdown" id="accordion">
+                            <!--eee-->
+                            <div class="accordion accordion-flush" id="accordionFlushExample">
                                 <div class="accordion-item">
-                                    <h6 class="accordion-header" id="headingthree">
-                                        <a class="accordion text-decoration-none dropdown-toggle" data-toggle="dropdown"
-                                            type="button" data-bs-toggle="collapse" data-bs-target="#collapsethree"
-                                            aria-expanded="true" aria-controls="collapsethree">
+                                    <h2 class="accordion-header" id="flush-headingThree">
+                                        <a class="accordion-button collapsed text-decoration-none"
+                                            data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                            aria-expanded="false" aria-controls="flush-collapseThree">
                                             Updates
                                         </a>
-                                    </h6>
-                                    <div id="collapsethree" class="accordion-collapse collapse show"
-                                        aria-labelledby="headingthree" data-bs-parent="#accordion">
+                                    </h2>
+                                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                             <div class="container">
                                                 <table class="table table-striped">
@@ -590,7 +628,7 @@
 
                         </div>
                         <canvas class="canvas" width="5"></canvas>
-                        <div class="tracking-location style-three">
+                        <div class="tracking-location style-three" id="dates">
                             <a class="dott"><i class="ico fa fa-cube ico-muted"></i></a>
                             <strong>Dec 04, 2018 </strong>
                         </div>
@@ -598,6 +636,8 @@
                 </div>
             </div>
         </div>
+
+
     </div>
     </div>
     <script differ>
